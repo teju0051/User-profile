@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  <style>
+   
+    body {
+      background-color: #000;
+      color: #EEE;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .box {
+      width: 200px;
+      height: 300px;
+      position: relative;
+      border: 1px solid #BBB;
+      background: #333;
+    }
+
+    .ribbon {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: 1;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      text-align: right;
+    }
+
+    .ribbon span {
+      font-size: 10px;
+      font-weight: bold;
+      color: #FFF;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 20px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      width: 100px;
+      display: block;
+      background: linear-gradient(90deg, rgba(247, 5, 5, 0) 0%, #F70505 50%, rgba(247, 5, 5, 0) 100%);
+      background-size: 200% 100%;
+      animation: glitter 2s linear infinite;
+      position: absolute;
+      top: 19px;
+      right: -21px;
+    }
+
+    @keyframes glitter {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .ribbon span::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid #8F0808;
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid #8F0808;
+    }
+
+    .ribbon span::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid transparent;
+      border-right: 3px solid #8F0808;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid #8F0808;
+    }
+
+    div[class^="Stat"] {
+      position: absolute;
+      right: 0;
+      width: 74%;
+      height: 8%;
+      padding: .5%;
+      background-color: #424242;
+      color: White;
+      text-align: left;
+    }
+
+    .Stat-eliminations {
+      top: 4%;
+    }
+
+    .Stat-victories {
+      top: 18%;
+    }
+
+    .Stat-defeats {
+      top: 32%;
+    }
+
+    .player-bio {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 25%;
+      width: 75%;
+      border-top: 1px solid White;
+    }
+
+    .player-bio button {
+      padding: 9px 30px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+
+    #profile-image {
+      position: absolute;
+      left: 5.26%;
+      bottom: 45%;
+      padding: 0%;
+      height: 26.5%;
+      object-fit: cover;
+      border: 2px solid #424241;
+      border-radius: 10px;
+    }
+
+    h2, b {
+      position: absolute;
+      right: 6.4%;
+      color: White;
+    }
+
+    #Level {
+      position: absolute;
+      top: 27.73%;
+      right: 1.81%;
+      height: 7.9%;
+      width: 14.9%;
+      border: 1px solid White;
+      color: White;
+      text-align: center;
+      padding-top: 1.72%;
+    }
+
+    .statistics {
+      position: absolute;
+      height: 100%;
+      max-height: 58.7%;
+      width: 100%;
+      max-width: 95.74%;
+      color: White;
+      bottom: 5%;
+      border-left: 1px solid White;
+      border-bottom-left-radius: 10px;
+      border-bottom: 1px solid White;
+      border-bottom-right-radius: 10px;
+      border-right: 1px solid White;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="Profile" id="profile">
+      <header class="profile-head">
+        <div class="ribbon">
+          <span>Staff</span>
+        </div>
+        <img src="https://i.ibb.co/K67D3mQ/Blender-01-08-2023-19-50-42.png" alt="PfP" id="profile-image" />
+          
+      </header><hr>
+      <h1>T-GAMES-SONAL</h1> <hr>
+      <div class="statistics">
+          <div class="Stat-eliminations">
+              <b>Eliminations: 100</b>
+          </div>
+          <div class="Stat-victories">
+              <b>Victories: 100</b>
+          </div>
+          <div class="Stat-defeats">
+              <b>Defeats: 100</b>
+          </div>
+          <div class="player-bio">
+             <br>
+              <button id="bioClose" onclick="window.location.href='https://teju0051.github.io/Bharatiya-warrior-users-account/uid=00001.html';">Close</button>
+              <button onclick="alert('Friend request full of receiver')">Add friend</button>
+          </div>
+      </div>
+  </body>
+</html>
